@@ -80,6 +80,8 @@ static ZJURLProtocol * _instance = nil;
 
 - (void)startLoading {
     
+    [NSURLProtocol setProperty:@(YES) forKey:kHasStartLoading inRequest:self.request.mutableCopy];
+    
     NSString *path = self.request.URL.path;
     NSDictionary *dataDict = [ZJURLProtocol shareInstance].mockDataDict[path];
     NSData *data = [NSJSONSerialization dataWithJSONObject:dataDict options:NSJSONWritingPrettyPrinted error:nil];
