@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  注意: AFHTTPSessionManager的方法`- (instancetype)initWithBaseURL:(nullable NSURL *)url
  sessionConfiguration:(nullable NSURLSessionConfiguration *)configuration`在调用时传入的configuration是有值的
  
- json文件即为mock数据 格式填写 "urlPath" : "data" DEBUG模式下 不需要进行mock 删除json内容即可
+ json文件即为mock数据 格式填写 "urlPath" : "data" DEBUG模式下 不需要进行mock 删除json内容或是修改path即可
  
      {
          "/mvp/course/app-preload" : {
