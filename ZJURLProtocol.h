@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
                 "data": {
                         "isNeedPreload": 0,
                         "resourceId": 5,
-                        "preloadZip": "https://appd.knowbox.cn/english/lisk5.zip",
+                        "preloadZip": "https://.......zip",
                         "preloadSize": 23
                         },
                 "msg": "成功测试数据"
