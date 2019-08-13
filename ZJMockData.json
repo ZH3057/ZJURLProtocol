@@ -4,7 +4,6 @@
         "data": {
             "isNeedPreload": 0,
             "resourceId": 5,
-            "preloadZip": "https://appd.knowbox.cn/english/lisk5.zip",
             "preloadSize": 23
         },
         "msg": "成功测试数据"

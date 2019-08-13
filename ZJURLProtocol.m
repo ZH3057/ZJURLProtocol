@@ -8,6 +8,7 @@
 
 #import "ZJURLProtocol.h"
 #import <objc/runtime.h>
+#import <AFNetworking/AFNetworking.h>
 
 static NSString * const kHasStartLoading = @"kHasStartLoading";
 
@@ -19,6 +20,17 @@ static NSString * const kHasStartLoading = @"kHasStartLoading";
 
 
 @implementation ZJURLProtocol
+
+#if DEBUG
+
++ (void)initialize {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self start];
+    });
+}
+
+#endif
 
 // MARK: - init
 
@@ -123,6 +135,7 @@ static ZJURLProtocol * _instance = nil;
 }
 
 - (instancetype)zj_initWithBaseURL:(NSURL *)url sessionConfiguration:(NSURLSessionConfiguration *)configuration {
+    if (!configuration) configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     configuration.protocolClasses = @[[NSClassFromString(@"ZJURLProtocol") class]];
     return [self zj_initWithBaseURL:url sessionConfiguration:configuration];
 }
