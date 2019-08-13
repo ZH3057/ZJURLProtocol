@@ -4,6 +4,7 @@
         "data": {
             "isNeedPreload": 0,
             "resourceId": 5,
+            "preloadZip": "https://.......zip",
             "preloadSize": 23
         },
         "msg": "成功测试数据"
